@@ -14,13 +14,31 @@ interface Profile {
 
 export default function Assignment2() {
   // 이 아래에 ProfileCard 컴포넌트 사용에 필요한 오브젝트(데이터)를 만들어 주세요.
-
+const chacter = {
+  imageSrc:"/캡처.PNG",
+  name:"장첸",
+  age:50,
+  nationality:"중국",
+  height:182,
+  weight:70,
+  job:"사채업자",
+  famousLines:["니 내 누군지 아니?"],
+}
   return (
     <>
       <Header title={"프로필 카드 만들기"} hasBack={true} />
       <div className="w-full h-full flex flex-col overflow-y-auto py-5 px-5 gap-5">
         {/* 이 아래에 ProfileCard 컴포넌트를 사용하는 코드를 작성해 주세요. */}
-        
+        <ProfileCard
+          imageSrc={chacter.imageSrc}
+          name={chacter.name}
+          age={chacter.age}
+          nationality={chacter.nationality}
+          height={chacter.height}
+          weight={chacter.weight}
+          job={chacter.job}
+          famousLines={chacter.famousLines}
+          />    
       </div>
     </>
   );
